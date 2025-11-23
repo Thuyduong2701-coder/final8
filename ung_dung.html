@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ứng dụng của InSb</title>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- CSS TÍCH HỢP --- */
+        body {
+            font-family: 'Baloo 2', cursive;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8f5;
+            color: #333;
+        }
+
+        header {
+            background-color: #4caf50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        header h1 { margin: 0; font-size: 1.8rem; }
+
+        .back-btn {
+            position: absolute; left: 20px; top: 50%;
+            transform: translateY(-50%);
+            text-decoration: none; color: white;
+            font-weight: bold; background: rgba(255,255,255,0.2);
+            padding: 8px 15px; border-radius: 5px; transition: 0.3s;
+        }
+        .back-btn:hover { background: rgba(255,255,255,0.4); }
+
+        .container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
+
+        /* Accordion Style */
+        .accordion {
+            background-color: #e6f2ea; color: #4caf50;
+            cursor: pointer; padding: 18px; width: 100%;
+            border: none; text-align: left; outline: none;
+            font-size: 1.2rem; font-family: 'Baloo 2', cursive; font-weight: 700;
+            transition: 0.4s; border-radius: 8px; margin-bottom: 10px;
+            display: flex; justify-content: space-between; align-items: center;
+            border: 1px solid #ccebd6;
+        }
+
+        .active, .accordion:hover { background-color: #4caf50; color: white; }
+        .accordion:after { content: '\002B'; font-weight: bold; float: right; margin-left: 5px; }
+        .active:after { content: "\2212"; }
+
+        .panel {
+            padding: 0 18px; background-color: white;
+            max-height: 0; overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            border-radius: 0 0 8px 8px; margin-top: -10px; margin-bottom: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .panel-content { padding: 20px 0; }
+        
+        /* Typography for content */
+        h3 { color: #2e7d32; border-bottom: 2px solid #e0e0e0; padding-bottom: 5px; margin-top: 20px; font-size: 1.1rem; }
+        ul { list-style-type: circle; padding-left: 20px; }
+        li { margin-bottom: 10px; line-height: 1.6; }
+        strong { color: #2e7d32; }
+        p { margin-bottom: 10px; line-height: 1.6; }
+        
+        /* Image Box Style */
+        .img-box {
+            text-align: center; margin-top: 20px; margin-bottom: 20px; padding: 15px;
+            background: #f9f9f9; border: 1px dashed #ccc; border-radius: 8px;
+        }
+        .img-box img { max-width: 100%; height: auto; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .img-caption { font-size: 0.95rem; color: #555; margin-top: 8px; font-weight: 600; font-style: italic;}
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="back-btn">← Trang chủ</a>
+        <h1>3. Ứng dụng của vật liệu InSb</h1>
+    </header>
+
+    <div class="container">
+        
+        <p style="text-align: justify;">
+            <strong>Antimonide (InSb)</strong> là vật liệu bán dẫn nhóm III–V có khe năng lượng nhỏ nhất và độ linh động điện tử cao nhất trong số các hợp chất III–V, nhờ đó được sử dụng rộng rãi trong các thiết bị hồng ngoại, cảm biến ánh sáng và cấu trúc điện tử tốc độ cao (Springer).
+        </p>
+        <p>Do vùng cấm rất hẹp và độ linh động điện tử cực cao, InSb được sử dụng mạnh trong:</p>
+
+        <button class="accordion">1. Ứng dụng trong Cảm biến hồng ngoại</button>
+        <div class="panel">
+            <div class="panel-content">
+                <p>InSb là bán dẫn vùng cấm hẹp (Eg &approx; 0.17–0.18 eV) &rarr; nhạy trong dải <strong>1–5 µm</strong>. Dùng trong các bộ phận cảm biến hồng ngoại (IR detectors) với 3 cơ chế chính:</p>
+
+                <h3>1. Photovoltaic (Quang điện) - Chuyên dùng để "Chụp ảnh" (Imaging)</h3>
+                <ul>
+                    <li><strong>Cơ chế:</strong> Khi photon IR đi vào, nó kích electron vượt qua vùng cấm &rarr; tạo ra điện áp ngay tại mối nối PN. Mỗi điểm ảnh là một diod nhỏ, nên có thể tạo mảng pixel rất lớn để dựng ảnh nhiệt độ phân giải cao.</li>
+                    <li><strong>Ứng dụng:</strong> Làm Camera nhiệt (Thermal Camera), kính nhìn đêm quân sự, đầu dò tên lửa tầm nhiệt.</li>
+                </ul>
+                <div class="img-box">
+                    <img src="Camera.webp" alt="Camera nhiệt InSb" onerror="this.style.display='none'">
+                    <div class="img-caption">Camera nhiệt khoa học hiệu năng cao (High-performance Cooled InSb Camera) sử dụng cơ chế Photovoltaic để đạt độ nhạy và tốc độ khung hình cao.</div>
+                </div>
+
+                <h3>2. Photoconductive (Quang dẫn) - Chuyên dùng để "Đo lường" (Sensing)</h3>
+                <ul>
+                    <li><strong>Cơ chế:</strong> Photon làm tăng số electron tự do trong vật liệu, khiến điện trở giảm. Dòng điện thay đổi tỷ lệ với cường độ bức xạ &rarr; rất phù hợp làm cảm biến đơn điểm để đo “nhiệt bao nhiêu” hoặc “có khí gì không”.</li>
+                    <li><strong>Ứng dụng:</strong> Làm Súng đo nhiệt độ (loại bắn lên trán hoặc đo máy móc), máy đo khí thải, hệ thống phân tích trong phòng thí nghiệm.</li>
+                </ul>
+                <div class="img-box">
+                    <img src="may-quang-pho-hong-ngoai.jpeg" alt="Máy quang phổ FTIR" onerror="this.style.display='none'">
+                    <div class="img-caption">Máy quang phổ hồng ngoại (FTIR): Sử dụng cảm biến InSb quang dẫn đơn điểm (Single element) để phân tích chính xác thành phần hóa học.</div>
+                </div>
+
+                <h3>3. Photoelectromagnetic (PEM) - Chuyên dùng cho "Môi trường bình thường"</h3>
+                <ul>
+                    <li><strong>Cơ chế:</strong> Ánh sáng tạo ra dòng hạt tải, dòng này đi qua một vùng có từ trường &rarr; sinh ra điện áp ngang do hiệu ứng từ.</li>
+                    <li><strong>Ưu điểm:</strong> Hoạt động được ở <strong>nhiệt độ phòng</strong> (Room Temperature), không cần làm lạnh như PV và PC.</li>
+                    <li><strong>Ứng dụng:</strong> Giám sát tia laser công nghiệp, đo tốc độ cao trong các nhà máy, thiết bị đo hiện trường.</li>
+                </ul>
+                <div class="img-box">
+                    <img src="duong_ray_tau_hoa.png" alt="Hot Box Detector" onerror="this.style.display='none'">
+                    <div class="img-caption">Hệ thống Hot Box Detector đường sắt: Sử dụng cảm biến InSb PEM phản hồi nhanh, không cần làm lạnh để đo nhiệt độ trục tàu tốc độ cao.</div>
+                </div>
+            </div>
+        </div>
+
+        <button class="accordion">2. Ứng dụng trong Quân sự – Khoa học</button>
+        <div class="panel">
+            <div class="panel-content">
+                <p>Nhờ khả năng phát hiện nhiệt độ cực nhạy, InSb đóng vai trò cốt lõi trong:</p>
+                
+                <ul>
+                    <li><strong>Camera nhiệt (Thermal imaging):</strong> Hệ thống tạo ảnh hồng ngoại nhiệt.</li>
+                    <li><strong>Mechanically-scanned IR imaging:</strong> Hệ thống tạo ảnh hồng ngoại quét cơ học (công nghệ cũ nhưng độ chính xác cao).</li>
+                    <li><strong>Terahertz imaging:</strong> Hệ thống tạo ảnh Terahertz (THz), InSb được dùng trong các bộ điều biến và cảm biến THz.</li>
+                    <li><strong>Bandgap detector array (AIM-9X):</strong> Mảng cảm biến vùng cấm trong tên lửa AIM-9X.</li>
+                </ul>
+                <div class="img-box">
+                    <img src="dau_do_ten_lua.jpg" alt="Tên lửa AIM-9" onerror="this.style.display='none'">
+                    <div class="img-caption">Tên lửa AIM-9: Sử dụng đầu dò mảng pha (Focal Plane Array) InSb để truy tìm mục tiêu nhiệt.</div>
+                </div>
+
+                <ul>
+                    <li><strong>Airborne navigation & Precision targeting:</strong> Định hướng trên không và định vị mục tiêu chính xác.</li>
+                </ul>
+                <div class="img-box">
+                    <img src="flir.jpg" alt="Airborne Turret" onerror="this.style.display='none'">
+                    <div class="img-caption">Hệ thống trinh sát đường không (Airborne Turret): Sử dụng mảng cảm biến InSb MWIR để dẫn đường và định vị mục tiêu chính xác.</div>
+                </div>
+
+                <ul>
+                    <li><strong>Marine IR systems:</strong> Hệ thống hồng ngoại trên tàu biển / hải quân.</li>
+                    <li><strong>Spectrometers & Telescope sensors:</strong> Máy quang phổ và cảm biến dùng trong kính thiên văn.</li>
+                </ul>
+                <div class="img-box">
+                    <img src="thien_van_hong_ngoai.jpg" alt="Ảnh thiên văn hồng ngoại" onerror="this.style.display='none'">
+                    <div class="img-caption">Ảnh thiên văn hồng ngoại: Cảm biến InSb trên kính thiên văn giúp quan sát các vật thể trong vũ trụ bị che khuất bởi bụi khí.</div>
+                </div>
+                
+                <ul>
+                    <li><strong>Optoelectronics MWIR:</strong> Các thiết bị quang điện tử dải 3–5 µm.</li>
+                </ul>
+            </div>
+        </div>
+
+        <button class="accordion">3. Ứng dụng trong Điện tử tốc độ cao</button>
+        <div class="panel">
+            <div class="panel-content">
+                <p>InSb có <strong>độ linh động electron (Mobility) lớn nhất</strong> trong mọi vật liệu bán dẫn khối (<strong>&approx;77,000 cm²/V&middot;s</strong> ở 300 K). Nhờ đó được dùng cho:</p>
+                
+                <ul>
+                    <li><strong>Transistor hiệu ứng trường (MESFET, HEMT):</strong> Các loại transistor tốc độ cao nhờ điện tử di chuyển rất nhanh trong kênh dẫn.</li>
+                    <li><strong>Điện tử tốc độ cao / công suất thấp:</strong> InSb cho phép xử lý tín hiệu nhanh nhưng tỏa nhiệt ít, phù hợp cho mạch cao tần.</li>
+                    <li><strong>Galvanomagnetic sensors (Hall, magnetoresistance):</strong> Hiệu ứng Hall, Cảm biến từ điện trở &rarr; Dùng trong đo từ trường nhờ độ linh động electron lớn, cho độ nhạy rất cao.</li>
+                    <li><strong>THz generators / Nanowire devices:</strong> Khai thác độ linh động cao và vùng cấm hẹp của InSb để tạo ra và phát hiện sóng terahertz.</li>
+                </ul>
+
+                <div class="img-box">
+                    <img src="vi_hong_ngoai.ppm" alt="InSb Nanowire SEM" onerror="this.style.display='none'">
+                    <div class="img-caption">Ảnh hiển vi điện tử (SEM) của mảng dây nano (Nanowire arrays) InSb</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                } 
+            });
+        }
+    </script>
+
+</body>
+</html>

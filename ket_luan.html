@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kết luận - InSb</title>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- CSS TÍCH HỢP --- */
+        body {
+            font-family: 'Baloo 2', cursive;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8f5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header giống các trang trước */
+        header {
+            background-color: #4caf50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        header h1 { margin: 0; font-size: 1.8rem; }
+
+        .back-btn {
+            position: absolute; left: 20px; top: 50%;
+            transform: translateY(-50%);
+            text-decoration: none; color: white;
+            font-weight: bold; background: rgba(255,255,255,0.2);
+            padding: 8px 15px; border-radius: 5px; transition: 0.3s;
+        }
+        .back-btn:hover { background: rgba(255,255,255,0.4); }
+
+        .container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
+
+        /* --- STYLE RIÊNG CHO PHẦN KẾT LUẬN --- */
+        
+        /* Hiệu ứng Fade In cho nội dung */
+        .fade-in {
+            animation: fadeIn 1s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Card chứa nội dung chính */
+        .conclusion-card {
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 10px 25px rgba(76, 175, 80, 0.15);
+            text-align: justify;
+            border-top: 5px solid #4caf50;
+        }
+
+        .conclusion-card p {
+            margin-bottom: 20px;
+            font-size: 1.15rem;
+            color: #444;
+        }
+
+        /* Các từ khóa nổi bật */
+        .highlight {
+            color: #2e7d32;
+            font-weight: 700;
+            background-color: #e8f5e9;
+            padding: 2px 5px;
+            border-radius: 4px;
+        }
+
+        /* Hộp thông điệp cuối cùng (Final Thought) */
+        .final-thought {
+            margin-top: 30px;
+            padding: 25px;
+            background-color: #e8f5e9;
+            border-left: 5px solid #4caf50;
+            border-radius: 0 10px 10px 0;
+            font-style: italic;
+            font-weight: 600;
+            color: #1b5e20;
+            font-size: 1.2rem;
+            text-align: center;
+            position: relative;
+        }
+        
+        /* Icon trang trí */
+        .icon-box {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .icon-check {
+            font-size: 3rem;
+            color: #4caf50;
+            background: #e8f5e9;
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            line-height: 80px;
+            display: inline-block;
+        }
+
+        /* Button về trang chủ ở cuối */
+        .home-btn-container {
+            text-align: center;
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+        .btn-home {
+            display: inline-block;
+            background-color: #4caf50;
+            color: white;
+            padding: 15px 40px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2rem;
+            transition: 0.3s;
+            box-shadow: 0 5px 15px rgba(76, 175, 80, 0.3);
+        }
+        .btn-home:hover {
+            background-color: #388e3c;
+            transform: translateY(-3px);
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="ung_dung.html" class="back-btn">← Quay lại</a>
+        <h1>4. Kết luận</h1>
+    </header>
+
+    <div class="container fade-in">
+        
+        <div class="conclusion-card">
+            <div class="icon-box">
+                <span class="icon-check">&#10003;</span>
+            </div>
+
+            <p>
+                <strong>Indium Antimonide (InSb)</strong> là một vật liệu bán dẫn đặc biệt, nổi bật nhờ khả năng tương tác hiệu quả với <span class="highlight">bức xạ hồng ngoại</span> và vận hành ở <span class="highlight">tốc độ cao</span>.
+            </p>
+
+            <p>
+                Những đặc tính ưu việt này mở ra nhiều cơ hội cho các thiết bị quang điện tử và điện tử chuyên dụng: từ <strong>cảm biến IR</strong> độ nhạy cao đến các hệ thống điện tử công suất thấp và thiết bị THz thế hệ mới.
+            </p>
+
+            <p>
+                Mặc dù không phổ biến trong các ứng dụng đại trà như pin mặt trời, InSb vẫn giữ vai trò <strong>không thể thay thế</strong> trong các lĩnh vực nghiên cứu mũi nhọn và công nghệ quốc phòng tiên tiến. Điều này chứng minh rằng giá trị của một vật liệu không chỉ nằm ở sự phổ biến, mà ở khả năng phục vụ hoàn hảo cho những yêu cầu kỹ thuật đặc thù.
+            </p>
+
+            <div class="final-thought">
+                "Nhìn chung, InSb là minh chứng rõ ràng cho việc chọn vật liệu phù hợp có thể tạo ra bước tiến đáng kể trong khoa học và công nghiệp."
+            </div>
+        </div>
+
+        <div class="home-btn-container">
+            <a href="index.html" class="btn-home">Về Trang Chủ</a>
+        </div>
+
+    </div>
+
+</body>
+</html>

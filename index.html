@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+
+<html lang="vi">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Chào mừng buổi thuyết trình InSb</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="main.css">
+
+</head>
+
+<body>
+
+    <!-- Splash screen -->
+
+    <div id="splash-screen">
+
+        <h1>Chào mừng thầy và các bạn đến với buổi thuyết trình về InSb!</h1>
+
+        <button id="enter-btn">Bắt đầu</button>
+
+    </div>
+
+
+
+    <!-- Nội dung chính (homepage) -->
+
+    <div id="homepage" style="display:none;">
+
+        <header class="c-header">
+
+            <h1>Welcome to bài thuyết trình về InSb</h1>
+
+            <nav>
+
+                <ul>
+
+                    <li><a href="#home">Trang chủ</a></li>
+                    <li><a href="thanh_vien.html">Thành viên</a></li>
+                    <li><a href="images/Mind Map.png">Sơ đồ tư duy</a></li>
+                    <li><a href="https://presenter.ahaslides.com/presentation/7768317?presenting=true" target="_blank">Minigame</a></li>
+
+
+                </ul>
+
+            </nav>
+
+        </header>
+
+
+
+        <div class="c-body">
+
+            <div class="c-sidebar">
+
+                <div class="c-item"><a href="gioi_thieu_vat_lieu.html">Giới thiệu vật liệu</a></div>
+
+                <div class="c-item"><a href="Tinh_chat.html">Tính chất</a></div>
+
+                <div class="c-item"><a href="ung_dung.html">Ứng dụng</a></div>
+
+                <div class="c-item"><a href="ket_luan.html">Kết luận</a></div>
+
+            </div>
+
+
+
+            <div class="c-content">
+
+
+
+               <section id="home" style="display:block;">
+
+    <div class="welcome-container">
+
+        <div class="welcome-header">
+
+            <h2>Chào mừng thầy và các bạn đến với buổi thuyết trình về InSb</h2>
+
+        </div>
+
+
+
+        <div class="intro-box">
+
+            <p>👋 <strong>Xin chào thầy và các bạn!</strong></p>
+
+            <p>Chào mừng mọi người đến với bài thuyết trình của Nhóm 3. Hôm nay, chúng mình sẽ cùng nhau đi sâu tìm hiểu về <strong>InSb (Indium Antimonide)</strong> - một vật liệu bán dẫn với những tính chất điện - quang cực kỳ thú vị.</p>
+
+        </div>
+
+
+
+        <div class="minigame-box">
+
+            <div class="game-icon">🎮</div>
+
+            <div class="game-content">
+
+                <h3>Đừng bỏ lỡ Minigame!</h3>
+
+                <p>Cuối buổi sẽ là phần kiểm tra kiến thức siêu vui nhộn:</p>
+
+                <ul>
+
+                    <li>✅ <strong>5 câu trắc nghiệm</strong> cực đơn giản.</li>
+
+                    <li>🏆 Người điểm cao nhất sẽ nhận <strong>1 PHẦN THƯỞNG ĐẶC BIỆT</strong>.</li>
+
+                </ul>
+
+                <p class="call-to-action">Hãy chú ý theo dõi nhé!</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+                <!-- SECTION KHÁC (tạm để trống – bạn thêm sau) -->
+
+                <section id="mindmap" style="display:none;">
+
+                    <h2>Sơ đồ tư duy</h2>
+
+                    <p>(Bạn có thể chèn hình hoặc HTML của Mindmap tại đây)</p>
+
+                </section>
+
+
+
+                <section id="material" style="display:none;">
+
+                    <h2>Giới thiệu về vật liệu InSb</h2>
+
+                    <p>InSb là một hợp chất bán dẫn nhóm III-V có đặc tính điện tử và quang học đặc biệt.</p>
+
+                </section>
+
+
+
+                <section id="properties" style="display:none;">
+
+                    <h2>Tính chất của vật liệu</h2>
+
+                    <ul>
+
+                        <li>Độ dẫn điện cao</li>
+
+                        <li>Chiều rộng vùng cấm nhỏ</li>
+
+                        <li>Độ linh động electron lớn</li>
+
+                    </ul>
+
+                </section>
+
+
+
+                <section id="applications" style="display:none;">
+
+                    <h2>Ứng dụng của vật liệu</h2>
+
+                    <p>InSb được sử dụng trong cảm biến hồng ngoại, điện tử tốc độ cao và linh kiện quang điện tử.</p>
+
+                </section>
+
+
+
+                <section id="conclusion" style="display:none;">
+
+                    <h2>Kết luận</h2>
+
+                    <p>InSb là vật liệu bán dẫn quan trọng với nhiều ứng dụng hiện đại và tiềm năng phát triển mạnh.</p>
+
+                </section>
+
+
+
+            </div>
+
+        </div>
+
+
+
+        <footer class="c-footer">
+
+            Bản quyền © 2025 Nhóm 3
+
+        </footer>
+
+    </div>
+
+
+
+<script>
+
+    // Khi nhấn nút "Bắt đầu", ẩn splash screen và hiện homepage
+
+    document.getElementById('enter-btn').addEventListener('click', function() {
+
+        document.getElementById('splash-screen').style.display = 'none';
+
+        document.getElementById('homepage').style.display = 'block';
+
+    });
+
+</script>
+
+
+
+</body>
+
+</html>

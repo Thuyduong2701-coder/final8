@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính chất & Công nghệ InSb</title>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- CSS TÍCH HỢP --- */
+        body {
+            font-family: 'Baloo 2', cursive;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8f5;
+            color: #333;
+        }
+
+        header {
+            background-color: #4caf50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        header h1 { margin: 0; font-size: 1.8rem; }
+
+        .back-btn {
+            position: absolute; left: 20px; top: 50%;
+            transform: translateY(-50%);
+            text-decoration: none; color: white;
+            font-weight: bold; background: rgba(255,255,255,0.2);
+            padding: 8px 15px; border-radius: 5px; transition: 0.3s;
+        }
+        .back-btn:hover { background: rgba(255,255,255,0.4); }
+
+        .container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
+
+        /* Accordion Style */
+        .accordion {
+            background-color: #e6f2ea; color: #4caf50;
+            cursor: pointer; padding: 18px; width: 100%;
+            border: none; text-align: left; outline: none;
+            font-size: 1.2rem; font-family: 'Baloo 2', cursive; font-weight: 700;
+            transition: 0.4s; border-radius: 8px; margin-bottom: 10px;
+            display: flex; justify-content: space-between; align-items: center;
+            border: 1px solid #ccebd6;
+        }
+
+        .active, .accordion:hover { background-color: #4caf50; color: white; }
+        .accordion:after { content: '\002B'; font-weight: bold; float: right; margin-left: 5px; }
+        .active:after { content: "\2212"; }
+
+        .panel {
+            padding: 0 18px; background-color: white;
+            max-height: 0; overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            border-radius: 0 0 8px 8px; margin-top: -10px; margin-bottom: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .panel-content { padding: 20px 0; }
+        ul { list-style-type: circle; padding-left: 20px; }
+        li { margin-bottom: 10px; }
+        strong { color: #2e7d32; }
+        
+        /* Image Box Style */
+        .img-box {
+            text-align: center; margin-top: 20px; padding: 15px;
+            background: #f9f9f9; border: 1px dashed #ccc; border-radius: 8px;
+        }
+        .img-box img { max-width: 100%; height: auto; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .img-caption { font-size: 0.95rem; color: #555; margin-top: 8px; font-weight: 600; font-style: italic;}
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="back-btn">← Trang chủ</a>
+        <h1>2. Tính chất & Công nghệ InSb</h1>
+    </header>
+
+    <div class="container">
+
+        <button class="accordion">Tính chất Điện – Quang</button>
+        <div class="panel">
+            <div class="panel-content">
+                <p><strong>Độ linh động điện tử (Electron Mobility):</strong></p>
+                <ul>
+                    <li>InSb có độ linh động electron tương đối cao: <strong>&mu;<sub>n</sub> &approx; 7 &times; 10<sup>4</sup> cm<sup>2</sup>/V&middot;s</strong> tại 300K.</li>
+                    <li>InSb có <strong>độ dài đạn đạo</strong> lớn nhất so với bất kỳ vật liệu bán dẫn nào được biết đến.</li>
+                </ul>
+
+                <p><strong>Bán dẫn vùng cấm hẹp (Narrow-gap semiconductor):</strong></p>
+                <ul>
+                    <li>InSb có vùng cấm nhỏ nhất trong số các bán dẫn III–V: <strong>E<sub>0</sub> = 0.18 eV</strong> (tại 300K).</li>
+                    <li>Điều này làm cho nó cực kỳ nhạy với bức xạ hồng ngoại trong dải <strong>1 &mu;m đến 5 &mu;m</strong>.</li>
+                    <li>Thích hợp cho các thiết bị quang điện tử bước sóng dài.</li>
+                </ul>
+
+                <div class="img-box">
+                    <img src="images/tinh_chat_dien_quang.png" alt="Biểu đồ độ nhạy phổ InSb" onerror="this.style.display='none'">
+                    <div class="img-caption">Hình minh họa: Biểu đồ độ nhạy phổ (Spectral Detectivity) của đầu dò InSb theo bước sóng.</div>
+                </div>
+            </div>
+        </div>
+
+        <button class="accordion">Tính chất Nhiệt – Vật lý</button>
+        <div class="panel">
+            <div class="panel-content">
+                <ul>
+                    <li><strong>Nhiệt độ nóng chảy:</strong> &approx; 525&deg;C.</li>
+                    <li><strong>Độ dẫn điện:</strong> Phụ thuộc mạnh vào nhiệt độ do vùng cấm hẹp.</li>
+                </ul>
+                
+                <div class="img-box">
+                    <img src="images/tinh_chat_nhiet_vat_ly.gif" alt="Biểu đồ Hall Mobility theo Nhiệt độ" onerror="this.style.display='none'">
+                    <div class="img-caption">Hình minh họa: Sự phụ thuộc của độ linh động Hall (&mu;<sub>H</sub>) vào nhiệt độ (T) ở vùng nhiệt độ thấp.</div>
+                </div>
+            </div>
+        </div>
+
+        <button class="accordion">Công nghệ chế tạo</button>
+        <div class="panel">
+            <div class="panel-content">
+                <p>Phương pháp tăng trưởng tinh thể/thin-film phổ biến:</p>
+                <ul>
+                    <li><strong>MBE (Molecular Beam Epitaxy):</strong> Phương pháp chùm tia phân tử, cho phép tạo màng mỏng với độ chính xác cấp nguyên tử.</li>
+                    <li>Các phương pháp khác như <strong>Sputtering</strong> hoặc <strong>PLD (Pulsed Laser Deposition)</strong> có thể được sử dụng cho thin-film trong ứng dụng nghiên cứu.</li>
+                </ul>
+
+                <div class="img-box">
+                    <img src="images/MBE.jpg" alt="Hệ thống MBE" onerror="this.style.display='none'">
+                    <div class="img-caption">Hình minh họa: Hệ thống MBE (Molecular Beam Epitaxy) hiện đại dùng trong nghiên cứu.</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                } 
+            });
+        }
+    </script>
+
+</body>
+</html>
